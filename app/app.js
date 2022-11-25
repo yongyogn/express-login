@@ -12,7 +12,8 @@ const home = require('./src/routes/home'); // 괄호 안의 경로에 있는 파
 // View 분리
 app.set('views', './src/views'); // 화면 뷰를 저장하고 관리해줄 파일을 ./views로 지정
 app.set('view engine', 'ejs'); // views 폴더 안에 생성될 html코드들을 어떤 엔진으로 해석할지 결정('ejs', 그냥 html이랑 비슷)
-
+app.use(express.static(`${__dirname}/src/public`)) // js폴더로 접근할 수 있도록 해주는 미들웨어, __dirname은 현재 파일이 있는 디렉토리 이름
+                                                   // 해당 경로(public폴더)를 정적 경로로 추가해주겠다는 의미
 
 app.use('/', home); // use는 미들웨어를 등록해주는 메소드, index.js의 라우터를 받아옴
 
