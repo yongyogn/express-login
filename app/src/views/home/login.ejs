@@ -6,7 +6,8 @@
         <style>
             ul {list-style:none;}
         </style>
-        <script src="/js/home/login.js"></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
+        <script src="/js/home/login.js" defer></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
+                                                        <!-- defer를 사용하여 login.js의 실행 순서를 조정(id객체를 받기 전에 js파일이 실행되는 것 방지) -->
     </head>
     <body>
         <form id="login">
@@ -19,8 +20,8 @@
                 <label for="pw">비밀번호</label>
                 <input type="password" id="pw">
             </li>
-            <input type="submit" value="로그인">
-            <button onclick="location.href='sign.html'">회원가입</button>
+            <input type="submit" value="로그인" id="loginBtn">
+            <button>회원가입</button>
             </ul>
         </form>
     </body>
