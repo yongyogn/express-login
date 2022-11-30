@@ -21,5 +21,14 @@ function login() {
                                   // 그냥 req는 {id: "id", pw: "pw"}형태, JSON.stringify(req)는 {"id": "id", "pw": "pw"} 형태
     })
         .then((res) => res.json())
-        .then(console.log);
+        .then((res) => {
+            if (res.success) {          // res.success가 true이면
+                location.href = "/"     // "/" 경로로 이동
+            } else{
+                alert(res.msg);         // res.success가 false이면 res에 있는 msg를 경고창으로 띄움
+            }
+        })
+        .catch((err) => {
+            console.error(new Error("로그인 중 에러 발생"));
+        });
 }
