@@ -28,7 +28,7 @@ function login() {
                 alert(res.msg);         // res.success가 false이면 res에 있는 msg를 경고창으로 띄움
             }
         })
-        .catch((err) => {
-            console.error(new Error("로그인 중 에러 발생"));
+        .catch((err) => {   // 로그인 중 에러 발생 시 console에 에러 표시
+            console.error(new Error("로그인 중 에러 발생")); // 
         });
 }
