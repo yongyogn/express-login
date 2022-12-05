@@ -27,12 +27,12 @@ function register() {
         .then((res) => res.json())
         .then((res) => {
             if (res.success) {          // res.success가 true이면
-                location.href = "/"     // "/" 경로로 이동
+                location.href = "/login"     // "/" 경로로 이동
             } else{
                 alert(res.msg);         // res.success가 false이면 res에 있는 msg를 경고창으로 띄움
             }
         })
-        .catch((err) => {   // 로그인 중 에러 발생 시 console에 에러 표시
-            console.error(new Error("로그인 중 에러 발생")); // 
+        .catch((err) => {   // 회원가입 중 에러 발생 시 console에 에러 표시
+            console.error(new Error("회원가입 중 에러 발생")); // 
         });
 }
