@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>로그인</title>
+        <style>
+            ul {list-style:none;}
+        </style>
+        <script src="/js/home/login.js" defer></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
+                                                        <!-- defer를 사용하여 login.js의 실행 순서를 조정(id객체를 받기 전에 js파일이 실행되는 것 방지) -->
+        <link rel="stylesheet" href="/css/home/login.css">
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="form">
+              <form class="login-form">
+                <input id="id" type="text" placeholder="아이디"/>
+                <input id="name" type="text" placeholder="이름"/>
+                <input id="pw" type="password" placeholder="비밀번호"/>
+                <input id="confirm-pw" type="password" placeholder="비밀번호확인"/>
+                <button id="signUpBtn">SIGN UP</button>
+                <p class="message">Already registered? <a href="/login">login</a></p>
+              </form>
+            </div>
+          </div>
+    </body>
+</html>
+
+<!-- Copyright (c) 2022 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy) -->
