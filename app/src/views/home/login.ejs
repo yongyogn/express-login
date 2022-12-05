@@ -8,21 +8,20 @@
         </style>
         <script src="/js/home/login.js" defer></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
                                                         <!-- defer를 사용하여 login.js의 실행 순서를 조정(id객체를 받기 전에 js파일이 실행되는 것 방지) -->
+        <link rel="stylesheet" href="/css/home/login.css">
     </head>
     <body>
-        <form id="login">
-            <ul>
-            <li>
-                <label for="id">아이디</label>
-                <input type="text" id="id">
-            </li>
-            <li>
-                <label for="pw">비밀번호</label>
-                <input type="password" id="pw">
-            </li>
-            <button id="loginBtn">로그인</button>
-            <button>회원가입</button>
-            </ul>
-        </form>
+        <div class="login-page">
+            <div class="form">
+              <form class="login-form">
+                <input id="id" type="text" placeholder="아이디"/>
+                <input id="pw" type="password" placeholder="비밀번호"/>
+                <button id="loginBtn">login</button>
+                <p class="message">Not registered? <a href="/register">Create an account</a></p>
+              </form>
+            </div>
+          </div>
     </body>
 </html>
+
+<!-- Copyright (c) 2022 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy) -->
