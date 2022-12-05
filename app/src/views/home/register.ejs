@@ -2,12 +2,11 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>로그인</title>
+        <title>회원가입</title>
         <style>
             ul {list-style:none;}
         </style>
-        <script src="/js/home/register.js" defer></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
-                                                        <!-- defer를 사용하여 login.js의 실행 순서를 조정(id객체를 받기 전에 js파일이 실행되는 것 방지) -->
+        
         <link rel="stylesheet" href="/css/home/login.css">
     </head>
     <body>
@@ -23,6 +22,8 @@
               </form>
             </div>
           </div>
+          <script src="/js/home/register.js" defer></script> <!--app.js에서 use 미들웨어를 통해 public 폴더 내의 js/home/login.js로 접근할 수 있게 됨-->
+                                                             <!-- defer를 사용하여 login.js의 실행 순서를 조정(id객체를 받기 전에 js파일이 실행되는 것 방지) -->
     </body>
 </html>
 

@@ -3,8 +3,8 @@
 const id = document.querySelector("#id"),
       name = document.querySelector("#name"),
       pw = document.querySelector("#pw"),
-      confirmPw = document.querySelector("#cofirm-pw"),
-      registerBtn = document.querySelector("#registerBtn");
+      confirmPw = document.querySelector("#confirm-pw"),
+      registerBtn = document.querySelector("#button");
 
 registerBtn.addEventListener("click", register);
 
@@ -15,6 +15,7 @@ function register() {
         pw: pw.value,
         confirmPw: confirmPw.value,
     };
+    console.log(req);
 
     fetch("/register", {   // register 경로에서
         method: "POST",    // http 메소드 중 POST라는 메소드로 데이터 전달
