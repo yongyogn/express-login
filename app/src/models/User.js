@@ -21,7 +21,8 @@ class User{
 
     register(){
         const client = this.body;
-        UserStorage.save(client); // constructor에서 넘겨준 body를 그대로 저장
+        const response = UserStorage.save(client); // constructor에서 넘겨준 body를 그대로 저장
+        return response;
     }
 }
 
