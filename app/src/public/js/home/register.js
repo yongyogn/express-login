@@ -31,7 +31,7 @@ function register() {
         .then((res) => res.json())
         .then((res) => {
             if (res.success) {          // res.success가 true이면
-                location.href = "/login"     // "/" 경로로 이동
+                location.href = "/login"     // "/login" 경로로 이동
             } else{
                 alert(res.msg);         // res.success가 false이면 res에 있는 msg를 경고창으로 띄움
             }
