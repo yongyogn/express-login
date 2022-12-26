@@ -2,8 +2,8 @@
 
 const id = document.querySelector("#id"),
       name = document.querySelector("#name"),
-      pw = document.querySelector("#pw"),
-      confirmPw = document.querySelector("#confirm-pw"),
+      psword = document.querySelector("#psword"),
+      confirmpsword = document.querySelector("#confirm-psword"),
       registerBtn = document.querySelector("#button");
 
 registerBtn.addEventListener("click", register);
@@ -11,12 +11,12 @@ registerBtn.addEventListener("click", register);
 function register() {
 
     if (!id.value) return alert("아이디를 입력해주십시오.");
-    if (pw.value !== confirmPw.value) return alert("비밀번호가 일치하지 않습니다.");
+    if (psword.value !== confirmpsword.value) return alert("비밀번호가 일치하지 않습니다.");
 
     const req = {
         id: id.value,
         name: name.value,
-        pw: pw.value,
+        psword: psword.value,
     };
     console.log(req);
 
@@ -26,7 +26,7 @@ function register() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(req) // JSON 객체는 문자열로 감싸져서 출력됨
-                                  // 그냥 req는 {id: "id", pw: "pw"}형태, JSON.stringify(req)는 {"id": "id", "pw": "pw"} 형태
+                                  // 그냥 req는 {id: "id", psword: "psword"}형태, JSON.stringify(req)는 {"id": "id", "psword": "psword"} 형태
     })
         .then((res) => res.json())
         .then((res) => {

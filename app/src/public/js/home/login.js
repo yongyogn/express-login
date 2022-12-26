@@ -1,7 +1,7 @@
 "use strict";
 
 const id = document.querySelector("#id"),
-      pw = document.querySelector("#pw"),
+      psword = document.querySelector("#psword"),
       loginBtn = document.querySelector("#button");
 
 loginBtn.addEventListener("click", login);
@@ -9,7 +9,7 @@ loginBtn.addEventListener("click", login);
 function login() {
     const req = {
         id: id.value,
-        pw: pw.value,
+        psword: psword.value,
     };
 
     fetch("/login", {   // login 경로에서
@@ -18,7 +18,7 @@ function login() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(req) // JSON 객체는 문자열로 감싸져서 출력됨
-                                  // 그냥 req는 {id: "id", pw: "pw"}형태, JSON.stringify(req)는 {"id": "id", "pw": "pw"} 형태
+                                  // 그냥 req는 {id: "id", psword: "psword"}형태, JSON.stringify(req)는 {"id": "id", "psword": "psword"} 형태
     })
         .then((res) => res.json())
         .then((res) => {
